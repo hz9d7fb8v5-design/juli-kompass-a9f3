@@ -1,6 +1,6 @@
 # Architekturcheck
 
-Stand: Build `20260705-5`
+Stand: Build `20260705-6`
 
 ## Zielbild
 
@@ -21,7 +21,7 @@ Die Seite bleibt eine einfache statische GitHub-Pages-Seite ohne Build-Prozess. 
 
 GitHub Pages kann die HTML-Datei kurzzeitig cachen. Deshalb nutzt die Seite jetzt zwei Mechanismen:
 
-1. Alle CSS- und JS-Dateien werden mit fester Build-ID geladen, aktuell `?v=20260705-5`.
+1. Alle CSS- und JS-Dateien werden mit fester Build-ID geladen, aktuell `?v=20260705-6`.
 2. `script.js` ruft `version.json?t=<Zeitstempel>` mit `cache: "no-store"` ab. Wenn dort eine neuere Build-ID steht, wird die Seite automatisch mit einer frischen URL neu geladen. Wenn das nicht geht, erscheint ein Aktualisierungsbanner.
 
 Wichtig: Bei jeder strukturellen Änderung sollten drei Stellen hochgezählt werden:
