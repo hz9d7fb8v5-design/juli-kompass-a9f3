@@ -22,7 +22,7 @@ function linkButtons(ids = []) {
 
   if (!selected.length) return "";
 
-  return `<div class="link-row">${selected.map(link => `<a href="${link.url}" target="_blank" rel="noopener">${link.title}</a>`).join("")}</div>`;
+  return `<div class="link-row">${selected.map(link => `<a href="${link.url}" target="_blank" rel="noopener"><span class="link-icon">⌖</span><span>${link.title}</span></a>`).join("")}</div>`;
 }
 
 function stars(rating = 0) {
@@ -30,15 +30,23 @@ function stars(rating = 0) {
   return `${"★".repeat(value)}${"☆".repeat(5 - value)}`;
 }
 
+function departureTime(value = "") {
+  const clean = String(value).trim();
+  if (!clean || clean === "offen" || clean === "später ergänzen") return "offen";
+  return clean.replace(/\s*Uhr$/i, "");
+}
+
 function dayCard(day) {
   return `
     <article class="card">
       <div class="day-header">
-        <h3>${formatDate(day.date)} · ${day.title}</h3>
-        <span class="badge">${day.label}</span>
+        <div>
+          <span class="badge">${day.label}</span>
+          <h3>${formatDate(day.date)} · ${day.title}</h3>
+        </div>
+        <time class="departure-time">${departureTime(day.departure)}</time>
       </div>
-      <p><strong>Abfahrt:</strong> ${day.departure}</p>
-      <p><strong>Notiz:</strong> ${day.note}</p>
+      <p><strong>Info:</strong> ${day.note}</p>
       ${linkButtons(day.links)}
     </article>
   `;
@@ -72,7 +80,7 @@ function renderToday() {
   byId("today-card").innerHTML = `
     <p class="eyebrow">${formatDate(today.date)} · ${today.label}</p>
     <h3>${today.title}</h3>
-    <p><strong>Abfahrt:</strong> ${today.departure}</p>
+    <p><strong>Abfahrt:</strong> ${departureTime(today.departure)}</p>
     <p><strong>Wichtig:</strong> ${today.note}</p>
     ${linkButtons(today.links)}
   `;
@@ -118,7 +126,7 @@ function renderLinks() {
     <article class="card">
       <h3>${category}</h3>
       <div class="link-row">
-        ${links.map(link => `<a href="${link.url}" target="_blank" rel="noopener">${link.title}</a>`).join("")}
+        ${links.map(link => `<a href="${link.url}" target="_blank" rel="noopener"><span class="link-icon">⌖</span><span>${link.title}</span></a>`).join("")}
       </div>
     </article>
   `).join("");
