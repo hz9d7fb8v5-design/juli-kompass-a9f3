@@ -1,16 +1,5 @@
 const foodItems = [
   {
-    id: "ensaimada",
-    name: "Ensaimada",
-    category: "Süßes",
-    image: "https://cdn.tasteatlas.com/images/dishes/48612786ce2f4c00ab65c08f43a69f86.jpg",
-    imageCredit: "TasteAtlas",
-    description: "Luftiges, schneckenförmiges Hefegebäck mit Puderzucker. Klassisch zum Kaffee oder Frühstück.",
-    status: "offen",
-    rating: 0,
-    note: ""
-  },
-  {
     id: "pa-amb-oli",
     name: "Pa amb oli",
     category: "Vorspeisen",
@@ -28,6 +17,17 @@ const foodItems = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkf9foSxAjvI9TadXWmvuE9fLtyc84irYyaR3pc6av2g&s=10",
     imageCredit: "Google Images",
     description: "Gefüllte Teigtaschen, warm oder kalt als Snack, Vorspeise oder für unterwegs.",
+    status: "offen",
+    rating: 0,
+    note: ""
+  },
+  {
+    id: "sopas-mallorquinas",
+    name: "Sopas mallorquinas",
+    category: "Vorspeisen",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbOhiO0DQKMb4BidQtN1R5vhH6-EsKaip6I1vH-qcHhw&s=10",
+    imageCredit: "Google Images",
+    description: "Traditionelles Gericht mit Gemüse, Brot und Brühe. Eher herzhaft-rustikal als Suppe im klassischen Sinn.",
     status: "offen",
     rating: 0,
     note: ""
@@ -66,23 +66,23 @@ const foodItems = [
     note: ""
   },
   {
-    id: "sopas-mallorquinas",
-    name: "Sopas mallorquinas",
-    category: "Vorspeisen",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbOhiO0DQKMb4BidQtN1R5vhH6-EsKaip6I1vH-qcHhw&s=10",
-    imageCredit: "Google Images",
-    description: "Traditionelles Gericht mit Gemüse, Brot und Brühe. Eher herzhaft-rustikal als Suppe im klassischen Sinn.",
-    status: "offen",
-    rating: 0,
-    note: ""
-  },
-  {
     id: "gelat-ametlla",
     name: "Gelat d’ametlla",
     category: "Nachspeise",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjOUg2cscSecX8irl05A9Zmq_x7PNsWvDVAstPrU4GXQ&s=10",
     imageCredit: "Google Images",
     description: "Mandeleis, passend zu Kuchen, Kaffee oder als einfacher Nachtisch an heißen Tagen.",
+    status: "offen",
+    rating: 0,
+    note: ""
+  },
+  {
+    id: "ensaimada",
+    name: "Ensaimada",
+    category: "Süßes",
+    image: "https://cdn.tasteatlas.com/images/dishes/48612786ce2f4c00ab65c08f43a69f86.jpg",
+    imageCredit: "TasteAtlas",
+    description: "Luftiges, schneckenförmiges Hefegebäck mit Puderzucker. Klassisch zum Kaffee oder Frühstück.",
     status: "offen",
     rating: 0,
     note: ""
