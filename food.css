@@ -47,9 +47,7 @@
   position: relative;
   overflow: hidden;
   display: grid;
-  gap: 12px;
-  min-height: 255px;
-  padding: 24px;
+  padding: 0;
   border-radius: var(--radius);
   background: var(--paper);
   border: 1px solid var(--line);
@@ -60,8 +58,45 @@
   content: "";
   position: absolute;
   inset: 0 0 auto;
+  z-index: 1;
   height: 5px;
   background: linear-gradient(90deg, var(--sun), var(--sea));
+}
+
+.food-card__image {
+  position: relative;
+  overflow: hidden;
+  min-height: 190px;
+  margin: 0;
+  background: rgba(11, 61, 74, .08);
+}
+
+.food-card__image img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  display: block;
+  object-fit: cover;
+}
+
+.food-card__image figcaption {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  max-width: calc(100% - 20px);
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, .88);
+  background: rgba(5, 28, 34, .48);
+  font-size: .62rem;
+  font-weight: 800;
+  backdrop-filter: blur(10px);
+}
+
+.food-card__body {
+  display: grid;
+  gap: 12px;
+  padding: 22px;
 }
 
 .food-card__top {
@@ -141,7 +176,8 @@
     min-height: 88px;
   }
 
-  .food-card {
-    min-height: auto;
+  .food-card__image,
+  .food-card__image img {
+    min-height: 210px;
   }
 }
