@@ -1,0 +1,130 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f1e8;
+  --card: #fffaf2;
+  --text: #1f2933;
+  --muted: #65727f;
+  --line: #e2d5c5;
+  --accent: #175c62;
+  --accent-2: #b86f42;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.lock-screen,
+.app {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.lock-screen {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+.hero { padding: 32px 0 20px; }
+h1, h2, p { margin-top: 0; }
+h1 { font-size: clamp(2rem, 7vw, 4rem); line-height: 1; margin-bottom: 12px; }
+h2 { font-size: 1.35rem; margin-bottom: 14px; }
+
+.eyebrow {
+  color: var(--accent-2);
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .78rem;
+  margin-bottom: 10px;
+}
+
+.muted { color: var(--muted); }
+.error { color: #9f1d20; margin-top: 10px; }
+
+.quick-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.quick-nav a,
+button {
+  border: 0;
+  border-radius: 16px;
+  background: var(--accent);
+  color: white;
+  padding: 13px 14px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.section { padding: 18px 0; }
+.grid { display: grid; gap: 12px; }
+.stack { display: grid; gap: 12px; }
+
+.card {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(31, 41, 51, .06);
+}
+
+.login-card { width: min(100%, 420px); }
+label { display: block; font-weight: 700; margin-bottom: 6px; }
+input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 13px 14px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.badge {
+  color: var(--accent);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.link-row a {
+  color: var(--accent);
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 999px;
+  padding: 8px 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (min-width: 720px) {
+  .quick-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
