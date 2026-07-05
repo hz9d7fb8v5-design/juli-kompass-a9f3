@@ -1,4 +1,3 @@
 {
-  "build": "20260705-5",
-  "note": "Stable build marker. The app checks this file with no-store to detect newer deployments."
+  "build": "20260705-6"
 }
