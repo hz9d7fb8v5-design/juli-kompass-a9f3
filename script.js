@@ -46,16 +46,23 @@ function dayCard(day) {
 
 function foodCard(item) {
   const statusLabel = item.rating > 0 ? item.status : "offen";
+  const imageMarkup = item.image
+    ? `<figure class="food-card__image"><img src="${item.image}" alt="${item.name}" loading="lazy"><figcaption>${item.imageCredit || "Bildquelle"}</figcaption></figure>`
+    : "";
+
   return `
     <article class="food-card">
-      <div class="food-card__top">
-        <span class="food-category">${item.category}</span>
-        <span class="food-status">${statusLabel}</span>
+      ${imageMarkup}
+      <div class="food-card__body">
+        <div class="food-card__top">
+          <span class="food-category">${item.category}</span>
+          <span class="food-status">${statusLabel}</span>
+        </div>
+        <h3>${item.name}</h3>
+        <p class="food-rating" aria-label="Bewertung ${item.rating} von 5">${stars(item.rating)}</p>
+        <p>${item.description}</p>
+        ${item.note ? `<p class="food-note"><strong>Notiz:</strong> ${item.note}</p>` : ""}
       </div>
-      <h3>${item.name}</h3>
-      <p class="food-rating" aria-label="Bewertung ${item.rating} von 5">${stars(item.rating)}</p>
-      <p>${item.description}</p>
-      ${item.note ? `<p class="food-note"><strong>Notiz:</strong> ${item.note}</p>` : ""}
     </article>
   `;
 }
