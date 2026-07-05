@@ -1,4 +1,4 @@
-const APP_BUILD_ID = "20260705-15";
+const APP_BUILD_ID = "20260705-16";
 
 function byId(id) {
   return document.getElementById(id);
@@ -183,6 +183,21 @@ function renderFood() {
   byId("food-list").innerHTML = foodItems.map(foodCard).join("");
 }
 
+const linkGroupLabels = {
+  Ausflug: { heading: "Ausflüge", count: "Ausflüge" },
+  Restaurant: { heading: "Restaurants", count: "Restaurants" },
+  Strand: { heading: "Strände", count: "Strände" }
+};
+
+function linkGroupHeading(category) {
+  return linkGroupLabels[category]?.heading || category;
+}
+
+function linkGroupCount(category, count) {
+  const label = linkGroupLabels[category]?.count || (count === 1 ? "Link" : "Links");
+  return `${count} ${label}`;
+}
+
 function renderLinks() {
   const grouped = mapLinks.reduce((acc, link) => {
     acc[link.category] ||= [];
@@ -193,8 +208,8 @@ function renderLinks() {
   byId("links-list").innerHTML = Object.entries(grouped).map(([category, links]) => `
     <article class="card link-group-card">
       <div>
-        <p class="eyebrow">${links.length} Links</p>
-        <h3>${escapeHtml(category)}</h3>
+        <p class="eyebrow">${escapeHtml(linkGroupCount(category, links.length))}</p>
+        <h3>${escapeHtml(linkGroupHeading(category))}</h3>
       </div>
       <div class="link-list">${links.map(link => mapLink(link)).join("")}</div>
     </article>
