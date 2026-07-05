@@ -118,6 +118,14 @@
   display: none;
 }
 
+.link-group-card > div > .eyebrow {
+  display: none;
+}
+
+.link-group-card h3 {
+  margin-bottom: 2px;
+}
+
 @media (max-width: 720px) {
   .food-summary {
     grid-template-columns: repeat(3, minmax(0, 1fr));
