@@ -17,3 +17,26 @@
 .top-nav {
   justify-content: center;
 }
+
+@media (max-width: 720px) {
+  .food-summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .food-summary article {
+    min-height: 74px;
+    padding: 12px 8px;
+    border-radius: 18px;
+    text-align: center;
+  }
+
+  .food-summary span {
+    font-size: .66rem;
+    line-height: 1.1;
+  }
+
+  .food-summary strong {
+    font-size: clamp(1.1rem, 6vw, 1.75rem);
+  }
+}
