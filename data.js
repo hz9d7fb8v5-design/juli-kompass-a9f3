@@ -44,7 +44,7 @@ const tripDays = [
     date: "2026-07-17",
     label: "Anreise",
     title: "Hinflug am Abend",
-    departure: "später ergänzen",
+    departure: "10:00 Uhr",
     note: "Ankommen, Mietwagen und Unterkunft. Keine sensiblen Details eintragen.",
     links: []
   },
@@ -52,7 +52,7 @@ const tripDays = [
     date: "2026-07-18",
     label: "Tag 1",
     title: "Ankommen, Einkauf, Grillen",
-    departure: "offen",
+    departure: "10:00 Uhr",
     note: "Erster voller Urlaubstag.",
     links: []
   },
@@ -60,7 +60,7 @@ const tripDays = [
     date: "2026-07-19",
     label: "Tag 2",
     title: "Strand / Bucht und WM-Finale",
-    departure: "offen",
+    departure: "10:00 Uhr",
     note: "WM-Finale um 21:00 Uhr.",
     links: []
   },
@@ -68,7 +68,7 @@ const tripDays = [
     date: "2026-07-20",
     label: "Tag 3",
     title: "Palma",
-    departure: "offen",
+    departure: "10:00 Uhr",
     note: "Details später ergänzen.",
     links: []
   },
@@ -76,7 +76,7 @@ const tripDays = [
     date: "2026-07-21",
     label: "Tag 4",
     title: "Sóller / Port de Sóller",
-    departure: "offen",
+    departure: "10:00 Uhr",
     note: "Details später ergänzen.",
     links: []
   },
@@ -84,7 +84,7 @@ const tripDays = [
     date: "2026-07-22",
     label: "Tag 5",
     title: "Tropfsteinhöhle",
-    departure: "offen",
+    departure: "10:00 Uhr",
     note: "Eine der Höhlen auswählen.",
     links: ["hoehle-1", "hoehle-2"]
   },
@@ -92,7 +92,7 @@ const tripDays = [
     date: "2026-07-23",
     label: "Tag 6",
     title: "Torrent / Schlucht wandern",
-    departure: "offen",
+    departure: "10:00 Uhr",
     note: "Früh starten, falls es heiß wird.",
     links: []
   },
@@ -100,7 +100,7 @@ const tripDays = [
     date: "2026-07-24",
     label: "Tag 7",
     title: "Rennradtour oder Buchten / Boot mieten",
-    departure: "offen",
+    departure: "10:00 Uhr",
     note: "Später konkretisieren.",
     links: []
   },
@@ -108,7 +108,7 @@ const tripDays = [
     date: "2026-07-25",
     label: "Tag 8",
     title: "Ballermann",
-    departure: "offen",
+    departure: "10:00 Uhr",
     note: "Echter Programmpunkt.",
     links: []
   },
@@ -116,7 +116,7 @@ const tripDays = [
     date: "2026-07-26",
     label: "Abreise",
     title: "Rückflug am Abend",
-    departure: "später ergänzen",
+    departure: "10:00 Uhr",
     note: "Rückgabe Mietwagen und Rückflug. Keine sensiblen Details eintragen.",
     links: []
   }
