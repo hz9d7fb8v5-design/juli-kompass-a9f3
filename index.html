@@ -14,7 +14,8 @@
     <nav class="top-nav" aria-label="Hauptnavigation">
       <a href="#today">Heute</a>
       <a href="#destinations">Ideen</a>
-      <a href="#program">Programm</a>
+      <a href="#food">Essen</a>
+      <a href="#program">Plan</a>
       <a href="#links">Links</a>
     </nav>
   </header>
@@ -72,6 +73,16 @@
       </div>
     </section>
 
+    <section id="food" class="section section--food">
+      <div class="section-heading section-heading--center">
+        <p class="eyebrow">Kulinarische Bucket List</p>
+        <h2>Essen & Trinken</h2>
+        <p>Speisen und Getränke, die wir probieren wollen. Bewertungen werden aktuell statisch aus den Daten geladen.</p>
+      </div>
+      <div id="food-summary" class="food-summary"></div>
+      <div id="food-list" class="food-grid"></div>
+    </section>
+
     <section id="program" class="section section--soft">
       <div class="section-heading section-heading--center">
         <p class="eyebrow">17.–26. Juli</p>
@@ -92,6 +103,7 @@
   </main>
 
   <script src="data.js"></script>
+  <script src="food.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
