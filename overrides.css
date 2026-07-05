@@ -1,0 +1,19 @@
+.hero {
+  background:
+    linear-gradient(180deg, rgba(8, 34, 42, .10), rgba(8, 34, 42, .72)),
+    linear-gradient(90deg, rgba(8, 34, 42, .46), rgba(8, 34, 42, .06) 58%, rgba(8, 34, 42, .36)),
+    url("https://www.urlaubstracker.de/wp-content/uploads/2018/01/spanien-mallorca-cala-pi-2048x1365.jpg") center / cover no-repeat;
+}
+
+.hero::before {
+  background: none;
+}
+
+.site-header {
+  justify-content: center;
+  padding-left: 14px;
+}
+
+.top-nav {
+  justify-content: center;
+}
