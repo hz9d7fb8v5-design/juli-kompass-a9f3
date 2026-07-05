@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="theme-color" content="#0b3d4a" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
   <title>Mallorca 2026 · Juli-Kompass</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
-  <link rel="stylesheet" href="food.css?v=2" />
+  <script>
+    window.assetVersion = String(Date.now());
+    document.write('<link rel="stylesheet" href="styles.css?v=' + window.assetVersion + '">');
+    document.write('<link rel="stylesheet" href="food.css?v=' + window.assetVersion + '">');
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -87,8 +93,10 @@
     </section>
   </main>
 
-  <script src="data.js?v=2"></script>
-  <script src="food.js?v=2"></script>
-  <script src="script.js?v=2"></script>
+  <script>
+    document.write('<script src="data.js?v=' + window.assetVersion + '"><\\/script>');
+    document.write('<script src="food.js?v=' + window.assetVersion + '"><\\/script>');
+    document.write('<script src="script.js?v=' + window.assetVersion + '"><\\/script>');
+  </script>
 </body>
 </html>
