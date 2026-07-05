@@ -1,4 +1,4 @@
-const APP_BUILD_ID = "20260705-5";
+const APP_BUILD_ID = "20260705-6";
 
 function byId(id) {
   return document.getElementById(id);
