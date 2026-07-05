@@ -1,13 +1,31 @@
 # Juli-Kompass
 
-Minimale Testversion für eine mobile Mallorca-Reiseplaner-Website.
+Mobile Reiseplaner-Website für Mallorca 2026.
+
+Live-Seite:
+
+https://precious-chimera-db9da1.netlify.app/
 
 ## Struktur
 
 - `index.html` – Grundgerüst der Website
 - `styles.css` – Gestaltung
-- `script.js` – Passwortscreen, Heute-Ansicht, Tagesprogramm, Linkliste
+- `script.js` – Heute-Ansicht, Tagesprogramm und Linkliste
 - `data.js` – editierbare Reisedaten
+
+## Hosting über Netlify
+
+Die Seite ist als statische Website über Netlify veröffentlicht.
+
+Empfohlene Netlify-Einstellungen:
+
+- Branch: `main`
+- Build command: leer lassen
+- Publish directory: `.`
+- Base directory: leer lassen
+- Framework preset: None / Static site
+
+Netlify aktualisiert die Live-Seite automatisch nach Änderungen im `main`-Branch.
 
 ## Inhalte ändern
 
@@ -40,8 +58,6 @@ links: ["palma"]
 
 ## Datenschutz
 
-Die Seite enthält bewusst keine Namen, keine genaue Unterkunftsadresse, keine Buchungsnummern und keine Flugdaten. Der Passwortschutz ist clientseitig und nur ein einfacher Sichtschutz.
+Die Seite enthält bewusst keine Namen, keine genaue Unterkunftsadresse, keine Buchungsnummern und keine detaillierten Flugdaten.
 
-## GitHub Pages
-
-Für GitHub Pages das Repository öffnen und unter `Settings` → `Pages` als Quelle `Deploy from a branch`, Branch `main`, Ordner `/root` auswählen.
+Ein einfacher Passwortschutz ist aktuell nicht aktiv. Er kann am Ende wieder ergänzt werden, wenn Inhalt und Gestaltung stabil sind.
