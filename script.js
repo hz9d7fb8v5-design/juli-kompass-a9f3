@@ -1,4 +1,4 @@
-const APP_BUILD_ID = "20260705-8";
+const APP_BUILD_ID = "20260705-9";
 
 function byId(id) {
   return document.getElementById(id);
@@ -46,7 +46,7 @@ function setupImageFallbacks() {
         img.src = fallback;
         return;
       }
-      img.closest("figure, .destination-card")?.classList.add("image-failed");
+      img.closest("figure, .destination-card, .map-link__thumb")?.classList.add("image-failed");
       img.remove();
     });
   });
@@ -62,16 +62,25 @@ function linkButtons(ids = []) {
   return `<div class="link-row">${selected.map(link => mapLink(link)).join("")}</div>`;
 }
 
+function linkInitials(link) {
+  const base = link.category || link.title || "Link";
+  return escapeHtml(base.slice(0, 2).toUpperCase());
+}
+
 function mapLink(link) {
   const detail = link.detail || `${link.category || "Ort"} · Google Maps`;
+  const thumbnail = link.image
+    ? `<span class="map-link__thumb">${imageTag(link.image, link.fallbackImage, link.title)}</span>`
+    : `<span class="map-link__thumb map-link__thumb--placeholder">${linkInitials(link)}</span>`;
+
   return `
     <a class="map-link" href="${escapeHtml(link.url)}" target="_blank" rel="noopener">
-      <span class="link-icon" aria-hidden="true">⌖</span>
+      ${thumbnail}
       <span class="map-link__text">
         <strong>${escapeHtml(link.title)}</strong>
         <small>${escapeHtml(detail)}</small>
       </span>
-      <span class="map-link__arrow" aria-hidden="true">↗</span>
+      <span class="map-link__arrow" aria-hidden="true">›</span>
     </a>
   `;
 }
