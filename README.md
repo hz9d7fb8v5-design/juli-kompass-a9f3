@@ -2,9 +2,9 @@
 
 Mobile Reiseplaner-Website für Mallorca 2026.
 
-Live-Seite:
+Live-Seite über GitHub Pages:
 
-https://precious-chimera-db9da1.netlify.app/
+https://hz9d7fb8v5-design.github.io/juli-kompass-a9f3/
 
 ## Struktur
 
@@ -13,19 +13,19 @@ https://precious-chimera-db9da1.netlify.app/
 - `script.js` – Heute-Ansicht, Tagesprogramm und Linkliste
 - `data.js` – editierbare Reisedaten
 
-## Hosting über Netlify
+## Hosting über GitHub Pages
 
-Die Seite ist als statische Website über Netlify veröffentlicht.
+Die Seite ist als statische Website für GitHub Pages aufgebaut.
 
-Empfohlene Netlify-Einstellungen:
+Empfohlene GitHub-Pages-Einstellungen:
 
+- Repository: öffentlich
+- Source: `Deploy from a branch`
 - Branch: `main`
-- Build command: leer lassen
-- Publish directory: `.`
-- Base directory: leer lassen
-- Framework preset: None / Static site
+- Folder: `/root`
+- HTTPS: aktiviert
 
-Netlify aktualisiert die Live-Seite automatisch nach Änderungen im `main`-Branch.
+GitHub Pages veröffentlicht die Dateien direkt aus dem Root-Verzeichnis des `main`-Branches. Es ist kein Build-Prozess nötig.
 
 ## Inhalte ändern
 
