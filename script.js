@@ -1,4 +1,4 @@
-const APP_BUILD_ID = "20260705-13";
+const APP_BUILD_ID = "20260705-15";
 
 function byId(id) {
   return document.getElementById(id);
@@ -207,6 +207,7 @@ function renderBuildInfo() {
 }
 
 function showUpdateBanner(newBuild) {
+  document.querySelectorAll(".update-banner").forEach(banner => banner.remove());
   const banner = document.createElement("div");
   banner.className = "update-banner";
   banner.innerHTML = `<span>Neue Version verfügbar: ${escapeHtml(newBuild)}</span><button type="button">Aktualisieren</button>`;
@@ -221,7 +222,10 @@ async function checkBuildVersion() {
     const response = await fetch(`version.json?t=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) return;
     const version = await response.json();
-    if (!version.build || version.build === APP_BUILD_ID) return;
+    if (!version.build || version.build === APP_BUILD_ID) {
+      document.querySelectorAll(".update-banner").forEach(banner => banner.remove());
+      return;
+    }
 
     const reloadKey = `juli-kompass-reloaded-${version.build}`;
     if (!sessionStorage.getItem(reloadKey)) {
