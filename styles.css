@@ -42,7 +42,7 @@ a { color: inherit; }
   gap: 18px;
   padding: 12px 14px 12px 18px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, .82);
+  background: rgba(255, 255, 255, .86);
   border: 1px solid rgba(255, 255, 255, .62);
   box-shadow: 0 14px 45px rgba(23, 37, 47, .12);
   backdrop-filter: blur(18px);
@@ -324,6 +324,8 @@ h3 {
   position: absolute;
   inset: 0;
   z-index: -2;
+  background-size: cover;
+  background-position: center;
   transition: transform .35s ease;
 }
 
@@ -332,7 +334,8 @@ h3 {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, transparent 10%, rgba(5, 28, 34, .82));
+  background:
+    linear-gradient(180deg, rgba(5, 28, 34, .04) 0%, rgba(5, 28, 34, .14) 35%, rgba(5, 28, 34, .86) 100%);
 }
 
 .destination-card:hover::before { transform: scale(1.04); }
@@ -342,7 +345,7 @@ h3 {
   margin-bottom: 10px;
   padding: 7px 10px;
   border-radius: 999px;
-  background: rgba(255,255,255,.17);
+  background: rgba(255,255,255,.20);
   color: #fff;
   font-size: .76rem;
   font-weight: 900;
@@ -354,32 +357,29 @@ h3 {
 .destination-card h3 {
   font-size: 1.75rem;
   color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,.24);
 }
 
 .destination-card p {
   margin: 8px 0 0;
-  color: rgba(255,255,255,.78);
+  color: rgba(255,255,255,.84);
 }
 
 .destination-card--palma::before {
-  background:
-    radial-gradient(circle at 22% 20%, rgba(255,255,255,.34), transparent 8rem),
-    linear-gradient(135deg, rgba(184, 92, 53, .92), rgba(32, 75, 84, .9));
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Kathedrale_von_Palma_II.jpg/1200px-Kathedrale_von_Palma_II.jpg");
+  background-position: center;
 }
 .destination-card--soller::before {
-  background:
-    radial-gradient(circle at 75% 18%, rgba(255,255,255,.28), transparent 8rem),
-    linear-gradient(135deg, rgba(75, 111, 82, .96), rgba(12, 70, 82, .92));
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Port_de_S%C3%B3ller.JPG/1200px-Port_de_S%C3%B3ller.JPG");
+  background-position: center;
 }
 .destination-card--cave::before {
-  background:
-    radial-gradient(circle at 70% 28%, rgba(240, 201, 140, .56), transparent 7rem),
-    linear-gradient(135deg, rgba(71, 55, 44, .96), rgba(14, 68, 76, .92));
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mallorca_Porto_Cristo_Coves_dels_Hams_asv2023-04_img04.jpg/1200px-Mallorca_Porto_Cristo_Coves_dels_Hams_asv2023-04_img04.jpg");
+  background-position: center;
 }
 .destination-card--beach::before {
-  background:
-    radial-gradient(circle at 75% 22%, rgba(255,255,255,.45), transparent 8rem),
-    linear-gradient(135deg, rgba(13, 137, 155, .95), rgba(235, 170, 88, .88));
+  background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Torta%2008.jpg?width=1200");
+  background-position: center;
 }
 
 .program-grid {
@@ -502,22 +502,37 @@ h3 {
 @media (max-width: 720px) {
   .site-header {
     inset: 10px 10px auto;
-    width: calc(100% - 20px);
+    left: 10px;
+    right: 10px;
+    transform: none;
+    width: auto;
+    max-width: none;
     border-radius: 24px;
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: column;
     gap: 8px;
+    padding: 10px;
+  }
+
+  .brand {
+    padding-inline: 6px;
+    font-size: .95rem;
   }
 
   .top-nav {
     width: 100%;
-    overflow-x: auto;
-    padding-bottom: 2px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    overflow: visible;
   }
 
   .top-nav a {
+    justify-content: center;
+    min-height: 34px;
+    padding: 7px 5px;
     white-space: nowrap;
-    font-size: .82rem;
+    font-size: .73rem;
   }
 
   .hero {
