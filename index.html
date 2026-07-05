@@ -4,73 +4,110 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow" />
-  <meta name="theme-color" content="#0f5f66" />
-  <title>Juli-Kompass</title>
+  <meta name="theme-color" content="#0b3d4a" />
+  <title>Mallorca 2026 · Juli-Kompass</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main id="app" class="app">
-    <header class="hero" id="overview">
-      <div class="hero__content">
-        <p class="eyebrow">17.07. – 26.07.2026</p>
-        <h1>Mallorca<br />Kompass</h1>
-        <p class="hero__text">Reiseplan, Tagesprogramm und Kartenlinks für die Woche rund um Son Catlar d'Alt.</p>
-        <div class="chip-row" aria-label="Reiseinfos">
-          <span class="chip">Mallorca 2026</span>
-          <span class="chip">Mietwagen</span>
-          <span class="chip">Son Catlar d'Alt</span>
-        </div>
-      </div>
-    </header>
+  <header class="site-header">
+    <a class="brand" href="#overview">Juli-Kompass</a>
+    <nav class="top-nav" aria-label="Hauptnavigation">
+      <a href="#today">Heute</a>
+      <a href="#destinations">Ideen</a>
+      <a href="#program">Programm</a>
+      <a href="#links">Links</a>
+    </nav>
+  </header>
 
-    <section class="section section--compact" aria-label="Schnellüberblick">
-      <div class="overview-grid">
-        <article class="mini-card">
-          <span>Hinflug</span>
-          <strong>17.07. abends</strong>
-        </article>
-        <article class="mini-card">
-          <span>Rückflug</span>
-          <strong>26.07. abends</strong>
-        </article>
-        <article class="mini-card">
-          <span>Status</span>
-          <strong>Planung offen</strong>
-        </article>
+  <main id="app">
+    <section class="hero" id="overview">
+      <div class="hero__shade"></div>
+      <div class="hero__content">
+        <p class="eyebrow">17.07. – 26.07.2026 · Son Catlar d'Alt</p>
+        <h1>Mallorca 2026</h1>
+        <p class="hero__text">Ein kompakter Reiseplan für Tage am Meer, Ausflüge, gutes Essen und spontane Entscheidungen vor Ort.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#today">Heute ansehen</a>
+          <a class="button button--ghost" href="#program">Zum Tagesplan</a>
+        </div>
       </div>
     </section>
 
-    <section id="today" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Aktueller Tag</p>
-        <h2>Heute</h2>
+    <section class="stats" aria-label="Schnellüberblick">
+      <article>
+        <span>Anreise</span>
+        <strong>17.07.</strong>
+        <small>abends</small>
+      </article>
+      <article>
+        <span>Abreise</span>
+        <strong>26.07.</strong>
+        <small>abends</small>
+      </article>
+      <article>
+        <span>Mobilität</span>
+        <strong>Mietwagen</strong>
+        <small>flexibel</small>
+      </article>
+    </section>
+
+    <section id="today" class="section section--feature">
+      <div class="section-heading section-heading--center">
+        <p class="eyebrow">Aktueller Reisetag</p>
+        <h2>Heute im Plan</h2>
+        <p>Die Seite springt automatisch auf den passenden Tag, sobald die Reise läuft.</p>
       </div>
       <div id="today-card" class="today-card"></div>
     </section>
 
-    <section id="program" class="section">
-      <div class="section-heading">
+    <section id="destinations" class="section">
+      <div class="section-heading section-heading--center">
+        <p class="eyebrow">Inspiration</p>
+        <h2>Must-sees & Ideen</h2>
+        <p>Die wichtigsten Bausteine für die Woche, später mit konkreten Zeiten und Links.</p>
+      </div>
+      <div class="destination-grid">
+        <article class="destination-card destination-card--palma">
+          <span>Stadt</span>
+          <h3>Palma</h3>
+          <p>Altstadt, Kathedrale, Gassen, Essen und ein entspannter Abend.</p>
+        </article>
+        <article class="destination-card destination-card--soller">
+          <span>Berge & Hafen</span>
+          <h3>Sóller</h3>
+          <p>Tramuntana, Port de Sóller und ein Tag mit Aussicht.</p>
+        </article>
+        <article class="destination-card destination-card--cave">
+          <span>Ausflug</span>
+          <h3>Tropfsteinhöhle</h3>
+          <p>Schlechtwetter-Option oder Pause von der Mittagshitze.</p>
+        </article>
+        <article class="destination-card destination-card--beach">
+          <span>Meer</span>
+          <h3>Buchten</h3>
+          <p>Strandtage, Pinien, Bootsidee und flexible Stopps.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="program" class="section section--soft">
+      <div class="section-heading section-heading--center">
         <p class="eyebrow">17.–26. Juli</p>
         <h2>Tagesprogramm</h2>
+        <p>Bewusst knapp gehalten: Datum, Plan, Abfahrt, Links und Notiz.</p>
       </div>
-      <div id="program-list" class="timeline"></div>
+      <div id="program-list" class="program-grid"></div>
     </section>
 
     <section id="links" class="section section--last">
-      <div class="section-heading">
+      <div class="section-heading section-heading--center">
         <p class="eyebrow">Google Maps</p>
         <h2>Karte & Links</h2>
+        <p>Restaurants, Strände und Ausflüge gesammelt an einem Ort.</p>
       </div>
       <div id="links-list" class="link-groups"></div>
     </section>
   </main>
-
-  <nav class="bottom-nav" aria-label="Hauptnavigation">
-    <a href="#overview"><span>⌂</span>Start</a>
-    <a href="#today"><span>◐</span>Heute</a>
-    <a href="#program"><span>☰</span>Tage</a>
-    <a href="#links"><span>⌖</span>Links</a>
-  </nav>
 
   <script src="data.js"></script>
   <script src="script.js"></script>
