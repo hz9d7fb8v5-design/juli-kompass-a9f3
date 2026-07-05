@@ -1,10 +1,43 @@
 const tripConfig = {
-  password: "5aufMalle",
-  rememberLogin: true,
   title: "Mallorca 2026",
   region: "Son Catlar d'Alt",
   dates: "17.07. – 26.07.2026"
 };
+
+const destinationCards = [
+  {
+    id: "palma",
+    type: "Stadt",
+    title: "Palma",
+    description: "Altstadt, Kathedrale, Gassen, Essen und ein entspannter Abend.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6BbM1j1zm0YkK_RMUYUlBEvHbJ0JanWjUsMNfsmFLg&s=10",
+    fallbackImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Kathedrale_von_Palma_II.jpg/1200px-Kathedrale_von_Palma_II.jpg"
+  },
+  {
+    id: "soller",
+    type: "Berge & Hafen",
+    title: "Sóller",
+    description: "Tramuntana, Port de Sóller und ein Tag mit Aussicht.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0OJkKgylUcScrnotPRJTDetGs5kER03BJrqIFJcJivA&s=10",
+    fallbackImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Port_de_S%C3%B3ller.JPG/1200px-Port_de_S%C3%B3ller.JPG"
+  },
+  {
+    id: "cave",
+    type: "Ausflug",
+    title: "Tropfsteinhöhle",
+    description: "Schlechtwetter-Option oder Pause von der Mittagshitze.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUowRJ6ulrmNH68JrvCJVfkBL6jL0Ou0hohLDKWgzjcQ&s=10",
+    fallbackImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mallorca_Porto_Cristo_Coves_dels_Hams_asv2023-04_img04.jpg/1200px-Mallorca_Porto_Cristo_Coves_dels_Hams_asv2023-04_img04.jpg"
+  },
+  {
+    id: "beach",
+    type: "Meer",
+    title: "Buchten",
+    description: "Strandtage, Pinien, Bootsidee und flexible Stopps.",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Torta%2008.jpg?width=1200",
+    fallbackImage: ""
+  }
+];
 
 const tripDays = [
   {
