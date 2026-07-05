@@ -4,6 +4,22 @@ function byId(id) {
   return document.getElementById(id);
 }
 
+function readRememberedLogin() {
+  try {
+    return localStorage.getItem(PASSWORD_KEY) === "true";
+  } catch (error) {
+    return false;
+  }
+}
+
+function rememberLogin() {
+  try {
+    localStorage.setItem(PASSWORD_KEY, "true");
+  } catch (error) {
+    // Local storage may be blocked. The page should still unlock.
+  }
+}
+
 function unlock() {
   byId("lock").hidden = true;
   byId("app").hidden = false;
@@ -17,16 +33,19 @@ function setupLogin() {
   const input = byId("password");
   const error = byId("login-error");
 
-  if (tripConfig.rememberLogin && localStorage.getItem(PASSWORD_KEY) === "true") {
+  if (tripConfig.rememberLogin && readRememberedLogin()) {
     unlock();
     return;
   }
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (input.value === tripConfig.password) {
-      if (tripConfig.rememberLogin) localStorage.setItem(PASSWORD_KEY, "true");
+    const enteredPassword = input.value.trim();
+
+    if (enteredPassword === tripConfig.password) {
+      error.hidden = true;
       unlock();
+      if (tripConfig.rememberLogin) rememberLogin();
     } else {
       error.hidden = false;
       input.select();
