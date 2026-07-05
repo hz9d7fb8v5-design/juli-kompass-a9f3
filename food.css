@@ -4,6 +4,18 @@
     linear-gradient(180deg, #fffaf2, #f8f3ea);
 }
 
+.destination-card--palma::before {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6BbM1j1zm0YkK_RMUYUlBEvHbJ0JanWjUsMNfsmFLg&s=10");
+}
+
+.destination-card--soller::before {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0OJkKgylUcScrnotPRJTDetGs5kER03BJrqIFJcJivA&s=10");
+}
+
+.destination-card--cave::before {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUowRJ6ulrmNH68JrvCJVfkBL6jL0Ou0hohLDKWgzjcQ&s=10");
+}
+
 .food-summary {
   width: min(100%, 860px);
   margin: 0 auto 26px;
