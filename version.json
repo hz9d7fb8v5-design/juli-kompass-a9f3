@@ -1,5 +1,4 @@
 {
   "build": "20260705-5",
-  "commit": "8ed148d52c72268e186a14bc239cafc84c768e6f",
   "note": "Stable build marker. The app checks this file with no-store to detect newer deployments."
 }
