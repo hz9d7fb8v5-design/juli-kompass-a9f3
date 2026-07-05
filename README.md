@@ -9,9 +9,11 @@ https://hz9d7fb8v5-design.github.io/juli-kompass-a9f3/
 ## Struktur
 
 - `index.html` – Grundgerüst der Website
-- `styles.css` – Gestaltung
-- `script.js` – Heute-Ansicht, Tagesprogramm und Linkliste
+- `styles.css` – Hauptgestaltung
+- `food.css` – Gestaltung der Essen-&-Trinken-Sektion
+- `script.js` – Heute-Ansicht, Tagesprogramm, Essen-&-Trinken-Bewertung und Linkliste
 - `data.js` – editierbare Reisedaten
+- `food.js` – editierbare Speisen, Getränke und statische Bewertungen
 
 ## Hosting über GitHub Pages
 
@@ -29,7 +31,7 @@ GitHub Pages veröffentlicht die Dateien direkt aus dem Root-Verzeichnis des `ma
 
 ## Inhalte ändern
 
-Die meisten Inhalte stehen in `data.js`.
+Die Reisedaten stehen in `data.js`. Die kulinarische Bucket List steht in `food.js`.
 
 ### Abfahrtzeit ändern
 
@@ -55,6 +57,36 @@ Danach kann die Link-ID beim Tag eingetragen werden:
 ```js
 links: ["palma"]
 ```
+
+## Essen & Trinken bewerten
+
+Die Bewertungen sind aktuell statisch. Sie werden in `food.js` gepflegt und sind dann für alle Besucher gleich sichtbar.
+
+Beispiel:
+
+```js
+{
+  id: "ensaimada",
+  name: "Ensaimada",
+  category: "Süßes",
+  status: "probiert",
+  rating: 4,
+  note: "Sehr gut zum Kaffee."
+}
+```
+
+Bewertungslogik:
+
+- `rating: 0` = noch nicht bewertet
+- `rating: 1` bis `5` = Sternebewertung
+- `status: "offen"`, `"probiert"` oder `"favorit"`
+- Der Durchschnitt wird automatisch aus allen Bewertungen größer 0 berechnet.
+
+## Backlog
+
+- Einfachen clientseitigen Passwortschutz wieder ergänzen.
+- Echte gemeinsame Bewertung prüfen, z. B. über Firebase Firestore oder eine vergleichbare kleine Backend-/Datenbanklösung.
+- Bilder optional lokal ins Repository übernehmen statt externe Wikimedia-URLs zu nutzen.
 
 ## Bildquellen
 
