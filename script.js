@@ -1,4 +1,4 @@
-const APP_BUILD_ID = "20260705-6";
+const APP_BUILD_ID = "20260705-7";
 
 function byId(id) {
   return document.getElementById(id);
@@ -63,7 +63,17 @@ function linkButtons(ids = []) {
 }
 
 function mapLink(link) {
-  return `<a class="map-link" href="${escapeHtml(link.url)}" target="_blank" rel="noopener"><span class="link-icon">⌖</span><span>${escapeHtml(link.title)}</span></a>`;
+  const detail = link.detail || `${link.category || "Ort"} · Google Maps`;
+  return `
+    <a class="map-link" href="${escapeHtml(link.url)}" target="_blank" rel="noopener">
+      <span class="link-icon" aria-hidden="true">⌖</span>
+      <span class="map-link__text">
+        <strong>${escapeHtml(link.title)}</strong>
+        <small>${escapeHtml(detail)}</small>
+      </span>
+      <span class="map-link__arrow" aria-hidden="true">↗</span>
+    </a>
+  `;
 }
 
 function stars(rating = 0) {
