@@ -63,14 +63,14 @@ const destinationCards = [
 const tripDays = [
   { date: "2026-07-17", label: "Anreise", title: "Hinflug am Abend", departure: "10:00 Uhr", note: "Ankommen, Mietwagen und Unterkunft. Keine sensiblen Details eintragen.", links: [] },
   { date: "2026-07-18", label: "Tag 1", title: "Ankommen, Einkauf, Grillen", departure: "10:00 Uhr", note: "Erster voller Urlaubstag.", links: [] },
-  { date: "2026-07-19", label: "Tag 2", title: "Strand / Bucht und WM-Finale", departure: "10:00 Uhr", note: "WM-Finale um 21:00 Uhr.", links: [] },
-  { date: "2026-07-20", label: "Tag 3", title: "Palma", departure: "10:00 Uhr", note: "Details später ergänzen.", links: [] },
-  { date: "2026-07-21", label: "Tag 4", title: "Sóller / Port de Sóller", departure: "10:00 Uhr", note: "Details später ergänzen.", links: [] },
-  { date: "2026-07-22", label: "Tag 5", title: "Tropfsteinhöhle", departure: "10:00 Uhr", note: "Eine der Höhlen auswählen.", links: ["hoehle-1", "hoehle-2"] },
-  { date: "2026-07-23", label: "Tag 6", title: "Torrent / Schlucht wandern", departure: "10:00 Uhr", note: "Früh starten, falls es heiß wird.", links: [] },
-  { date: "2026-07-24", label: "Tag 7", title: "Rennradtour oder Buchten / Boot mieten", departure: "10:00 Uhr", note: "Später konkretisieren.", links: [] },
-  { date: "2026-07-25", label: "Tag 8", title: "Ballermann", departure: "10:00 Uhr", note: "Echter Programmpunkt.", links: [] },
-  { date: "2026-07-26", label: "Abreise", title: "Rückflug am Abend", departure: "10:00 Uhr", note: "Rückgabe Mietwagen und Rückflug. Keine sensiblen Details eintragen.", links: [] }
+  { date: "2026-07-19", label: "Tag 2", title: "Buchten im Osten & Drachenhöhlen", departure: "10:00 Uhr", note: "Buchten im Osten mit Besuch der Coves del Drach verbinden.", links: ["hoehle-1", "hoehle-2"] },
+  { date: "2026-07-20", label: "Tag 3", title: "Sóller & Port de Sóller", departure: "10:00 Uhr", note: "Tramuntana, Sóller und anschließend Port de Sóller.", links: [] },
+  { date: "2026-07-21", label: "Tag 4", title: "Palma & Castell de Bellver", departure: "10:00 Uhr", note: "Palma und Castell de Bellver; am Abend Ruta Martiana.", links: [] },
+  { date: "2026-07-22", label: "Tag 5", title: "Sineu, Valldemossa & Deià", departure: "10:00 Uhr", note: "Markt in Sineu und anschließend Valldemossa und Deià.", links: [] },
+  { date: "2026-07-23", label: "Tag 6", title: "Sant Elm & Dragonera", departure: "10:00 Uhr", note: "Sant Elm und Ausflug zur Insel Sa Dragonera.", links: [] },
+  { date: "2026-07-24", label: "Tag 7", title: "Palma Aquarium", departure: "10:00 Uhr", note: "Besuch des Palma Aquariums.", links: [] },
+  { date: "2026-07-25", label: "Tag 8", title: "Norden, Cap de Formentor & Paella", departure: "10:00 Uhr", note: "Ausflug in den Norden mit Cap de Formentor und Paella.", links: [] },
+  { date: "2026-07-26", label: "Abreise", title: "Strand, Ausklang & Rückflug", departure: "10:00 Uhr", note: "Entspannter Strandtag, Ausklang, Mietwagenrückgabe und Rückflug.", links: [] }
 ];
 
 const mapLinks = [
